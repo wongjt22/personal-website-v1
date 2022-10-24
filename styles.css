@@ -3,6 +3,7 @@
   color: var(--body-text-color);
 
   --default-color: whitesmoke;
+  --important-text: #efa500;
   --font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
   --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
   --background-color: #161b40;
@@ -22,14 +23,22 @@ html {
   background-color: var(--background-color);
 }
 
-.reveal.visible {
-  /* animation: fadeIn 3s; */
+.reveal {
+  transform: translateY(10px);
+  opacity: 0;
+  transition: all 2s ease;
 }
 
-@keyframes fadeIn {
+.reveal.visible {
+  /* animation: fadeIn 3s; */
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
-}
+} */
 
 .navbar {
   
@@ -48,7 +57,7 @@ html {
 }
 
 .navbar li {
-  margin: 20px;
+  margin: 20px auto auto auto;
 }
 
 .navbar a:not(button a) {
@@ -62,9 +71,10 @@ html {
 }
 
 #hero {
-  margin-left: 20%;
+  margin: 18% auto 20% 20%;
+  /* margin-left: 20%;
   margin-top: 18%;
-  margin-bottom: 25%
+  margin-bottom: 20% */
 }
 
 #hero h1 {
@@ -114,9 +124,13 @@ html {
   color: var(--highlight-text-color);
 }
 
+span {
+  color: var(--important-text);
+}
+
 h2 {
   font-size: 50px;
-  margin-bottom: 1%;
+  margin: auto auto
   color: var(--heading-text-color);
   font-family: var(--font-mono);
   font-weight: 400;

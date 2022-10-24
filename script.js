@@ -4,7 +4,7 @@ const fadeIn = () => {
   for (var i = 0; i < reveals.length; i++) {
     var windowHeight = window.innerHeight;
     var visibleTop = reveals[i].getBoundingClientRect().top; 
-    var fadeInPoint = 150;
+    var fadeInPoint = 10;
 
     if (visibleTop < windowHeight - fadeInPoint) {
       reveals[i].classList.add('visible');
