@@ -1,15 +1,19 @@
-$(document).on("scroll", function() {
-  var pageTop = $(document).scrollTop();
-  var pageBottom = pageTop + $(window).height();
-  var tags = $(".tag");
+const fadeIn = () => {
+  var reveals = document.querySelectorAll('.reveal');
 
-  for (var i = 0; i < tags.length; i++) {
-    var tag = tags[i];
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var visibleTop = reveals[i].getBoundingClientRect().top; 
+    var fadeInPoint = 150;
 
-    if ($(tag).position().top < pageBottom) {
-      $(tag).addClass("visible");
+    if (visibleTop < windowHeight - fadeInPoint) {
+      reveals[i].classList.add('visible');
+      console.log("TEST");
     } else {
-      $(tag).removeClass("visible");
+      reveals[i].classList.remove('visible');
     }
   }
-});
+}
+
+window.addEventListener('scroll', fadeIn);
+
