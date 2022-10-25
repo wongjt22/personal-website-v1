@@ -244,10 +244,10 @@ a {
 }
 
 .socials {
-  margin-top: 5%;
   display: flex;
   justify-content: center;
   column-gap: 5%;
+  margin: 5% auto auto auto
 }
 
 .social:hover, .project:hover {
