@@ -57,7 +57,7 @@ html {
 }
 
 .navbar li {
-  margin: 20px auto auto auto;
+  margin: 20px 15px 20px 15px;
 }
 
 .navbar a:not(button a) {
@@ -130,7 +130,6 @@ span {
 
 h2 {
   font-size: 50px;
-  margin: auto auto
   color: var(--heading-text-color);
   font-family: var(--font-mono);
   font-weight: 400;
