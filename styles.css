@@ -40,8 +40,11 @@ html {
   100% { opacity: 1; }
 } */
 
-.navbar {
-  
+/* .navbar {
+  background-color: var(--background-color);
+} */
+
+.navbar-links {
   position: fixed;
   top: 5px;
   right: 0;
@@ -51,22 +54,22 @@ html {
   justify-content: center;
 }
 
-.navbar * {
+.navbar-links * {
   display: inline;
   font-family: var(--font-mono);
 }
 
-.navbar li {
+.navbar-links li {
   margin: 20px 15px 20px 15px;
 }
 
-.navbar a:not(button a) {
+.navbar-links a:not(button a) {
   color: var(--default-color);
   font-size: 13px;
   text-decoration: none;
 }
 
-.navbar a:hover:not(button a) {
+.navbar-links a:hover:not(button a) {
   color: var(--highlight-text-color);
 }
 
