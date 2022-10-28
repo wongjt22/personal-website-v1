@@ -29,6 +29,8 @@ const contentFade = () => {
  */
 
 window.addEventListener('scroll', contentFade);
+window.addEventListener('load', contentFade);
+
 // window.addEventListener('scroll', navbarFade);
 
 
