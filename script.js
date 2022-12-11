@@ -14,23 +14,21 @@ const contentFade = () => {
   }
 }
 
-/* const navbarFade = () => {
-  var navbar = document.querySelector('.navbar');
-  var scroll = 0;
+var lastScroll = 0;
+var navbar = document.querySelectorAll('.navbar');
+const navbarFade = () => {
   var newScroll = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
-
-  if (newScroll < scroll) {
+  if (newScroll > lastScroll){
     navbar.classList.remove('visible');
   } else {
     navbar.classList.add('visible');
   }
-  scroll = newScroll <= 0 ? 0 : newScroll;
+  lastScroll = newScroll <= 0 ? 0 : newScroll; 
 }
- */
+
 
 window.addEventListener('scroll', contentFade);
 window.addEventListener('load', contentFade);
-
-// window.addEventListener('scroll', navbarFade);
+window.addEventListener('scroll', navbarFade);
 
 
